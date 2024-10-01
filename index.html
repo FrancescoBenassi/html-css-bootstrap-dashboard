@@ -56,16 +56,19 @@
     <!-- contenuto della pagina -->
     <main>
         <!-- testa del contenuto -->
-        <div class="container d-flex mt-4 gap-5">
-            <section>
+        <div class="container mx-auto mt-4 row g-5">
+            <!-- sezione libri -->
+            <section class="col-md-12 col-lg-8">
+                <!-- intestazione del contenuto -->
                 <div class="mb-4 d-flex justify-content-between align-items-center">
                     <h1 class="fw-light fs-3 text mb-0">Catalogo libri</h1>
                     <a href="newbook.html">
                         <button type="button" class="btn btn-primary">Aggiungi Libro</button>
                     </a>
                 </div>
+                <!-- /intestazione del contenuto -->
                 <!-- /testa del contenuto -->
-                <!-- inizio della tabella  -->
+                <!-- inizio della tabella dei libri -->
                 <table class="table table-lightgrey table-striped  align-middle">
                     <thead>
                         <tr>
@@ -214,43 +217,106 @@
                         </tr>
                     </tbody>
                 </table>
-                <!-- /fine della tabella  -->
+                <!-- /fine della tabella dei libri -->
             </section>
-            <section>
-                <div class="card" style="width: 18rem;">
+            <!-- /sezione libri -->
+            <!-- sezione domande -->
+            <section class="col-md-12 col-lg-4 order-md-last">
+                <!-- prima card con domande -->
+                <div class="card mb-4">
                     <div class="card-header">
                         <h2 class="fw-light fs-3 text">Todo</h2>
                     </div>
-                    <div class="card" style="width: 18rem;">
-                        <ul class="list-group m-3">
-                            <li class="list-group-item">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="call">
-                                    <label class="form-check-label" for="call">
-                                        Chiamare segreteria
-                                    </label>
+                    <ul class="list-group list-group-flush border rounded m-3">
+                        <li class="list-group-item d-flex gap-2">
+                            <input class="form-check-input flex-shrink-0" type="checkbox" value="firstquest"
+                                id="firstquest">
+                            <label for="firstquest">
+                                Chiamare segreteria
+                            </label>
+                        </li>
+                        <li class="list-group-item d-flex gap-2">
+                            <input class="form-check-input flex-shrink-0" type="checkbox" value="secondquest"
+                                id="secondquest">
+                            <label for="secondquest">
+                                Mandare avvisi prestiti scaduti
+                            </label>
+                        </li>
+                        <li class="list-group-item d-flex gap-2">
+                            <input class="form-check-input flex-shrink-0" type="checkbox" value="thirdquest" id="thirdquest">
+                            <label for="thirdquest">
+                                Ordinare nuovi libri
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /prima card con domande -->
+                <!-- seconda card con domande -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h2 class="fw-light fs-3 text">F.A.Q</h2>
+                    </div>
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                    aria-controls="flush-collapseOne">
+                                    Come aggiungere un nuovo libro?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                                    demonstrate the
+                                    <code>.accordion-flush</code> class. This is the first item's accordion body.
                                 </div>
-                            </li>
-                            <li class="list-group-item">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="check">
-                                    <label class="form-check-label text-nowrap" for="check">
-                                        -
-                                    </label>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                    aria-controls="flush-collapseTwo">
+                                    Come posso accedere all'anagrafica utenti?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                                    demonstrate the
+                                    <code>.accordion-flush</code> class. This is the second item's accordion body. Let's
+                                    imagine this being
+                                    filled with some actual content.
                                 </div>
-                            </li>
-                            <li class="list-group-item">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="books">
-                                    <label class="form-check-label" for="books">
-                                        Ordinare nuovi libri
-                                    </label>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                    aria-controls="flush-collapseThree">
+                                    Posso usare questa dashbord mobile?
+                                </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Placeholder content for this accordion, which is intended to
+                                    demonstrate the
+                                    <code>.accordion-flush</code> class. This is the third item's accordion body.
+                                    Nothing more exciting
+                                    happening here in terms of content, but just filling up the space to make it look,
+                                    at least at first
+                                    glance, a bit more representative of how this would look in a real-world
+                                    application.
                                 </div>
-                            </li>
-                        </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <!-- seconda card con domande -->
             </section>
+            <!-- /sezione domande -->
         </div>
     </main>
     <!-- /contenuto della pagina -->
